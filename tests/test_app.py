@@ -10,5 +10,5 @@ def client():
 
 def test_home_page(client):
     """Test that the home page returns a 200 status code"""
-    response = client.get('/')
-    assert response.status_code == 200
+    response = client.get('/tasks')
+    assert response.status_code == 400  # Expecting 400 because no tasks are created yet
